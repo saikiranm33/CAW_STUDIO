@@ -1,0 +1,4 @@
+export const ACTION_TYPES = {
+  GET_DATA: 'GET_DATA',
+  UPDATE_LIKE: 'UPDATE_LIKE',
+};
