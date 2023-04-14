@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import COLORS from '../utility/colors';
-import CustomIcon from '../utility/CustomIcon';
+import BaseIcon from '../utility/CustomIcon';
 import ShowModelInfo from './ItemModalView';
 
 const PayScreen = props => {
@@ -14,7 +14,7 @@ const PayScreen = props => {
           setModalVisible(true);
         }}
         style={styles.buttonStyle}>
-        <CustomIcon
+        <BaseIcon
           name="plus"
           color={'white'}
           size={50}

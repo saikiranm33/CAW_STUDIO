@@ -2,7 +2,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
 import AddModalView from '../component/AddModalView';
 import Dashboard from '../container/dashboard';
-import CustomIcon from '../utility/CustomIcon';
+import BaseIcon from '../utility/CustomIcon';
 import COLORS from '../utility/colors';
 import {createStackNavigator} from '@react-navigation/stack';
 import Details from '../container/details';
@@ -30,7 +30,7 @@ const PaymentStack = props => {
         options={{
           tabBarLabel: 'Feeds',
           tabBarIcon: ({focused}) => (
-            <CustomIcon
+            <BaseIcon
               focused={focused}
               name="feed"
               size={ICON_SIZE}
@@ -45,7 +45,7 @@ const PaymentStack = props => {
         options={{
           tabBarLabel: 'Library',
           tabBarIcon: ({focused}) => (
-            <CustomIcon
+            <BaseIcon
               focused={focused}
               name="group"
               size={ICON_SIZE}
@@ -67,7 +67,7 @@ const PaymentStack = props => {
         options={{
           tabBarLabel: 'messages',
           tabBarIcon: ({focused}) => (
-            <CustomIcon
+            <BaseIcon
               focused={focused}
               name="groupcoment"
               size={ICON_SIZE}
@@ -82,7 +82,7 @@ const PaymentStack = props => {
         options={{
           tabBarLabel: 'Services',
           tabBarIcon: ({focused}) => (
-            <CustomIcon
+            <BaseIcon
               focused={focused}
               name="box"
               size={ICON_SIZE}

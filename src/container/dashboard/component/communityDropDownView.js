@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
 import COLORS from '../../../utility/colors';
-import CustomIcon from '../../../utility/CustomIcon';
+import BaseIcon from '../../../utility/CustomIcon';
 import {FONT_WEIGHT_MAX} from '../../../utility/fontWeight';
 import {FONT_LARGE, FONT_XLARGE} from '../../../utility/textSize';
 
@@ -12,7 +12,7 @@ const CommunityDropDownView = () => {
       <View style={styles.subContainer}>
         <View style={styles.allCommunities}>
           <Text style={styles.headerTitle}>All Communities</Text>
-          <CustomIcon
+          <BaseIcon
             name={'right'}
             style={styles.rightIcon}
             color={COLORS.APP_THEME_COLOR}

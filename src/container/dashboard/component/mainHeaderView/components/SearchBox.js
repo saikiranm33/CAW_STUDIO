@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, TextInput, Platform} from 'react-native';
 import COLORS from '../../../../../utility/colors';
-import CustomIcon from '../../../../../utility/CustomIcon';
+import BaseIcon from '../../../../../utility/CustomIcon';
 import {FONT_LARGE} from '../../../../../utility/textSize';
 
 const SearchBox = () => {
@@ -11,7 +11,7 @@ const SearchBox = () => {
         style={styles.textInput}
         placeholder={'Search posts and members'}
       />
-      <CustomIcon
+      <BaseIcon
         name="search"
         size={20}
         color={COLORS.LIGHT_COLOR}

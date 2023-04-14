@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {useDispatch} from 'react-redux';
 import COLORS from '../../../../../utility/colors';
-import CustomIcon from '../../../../../utility/CustomIcon';
+import BaseIcon from '../../../../../utility/CustomIcon';
 import {postLikeAction} from '../../../../../redux/actions/getFeed';
 import {ACTION_TYPES} from '../../../../../utility/customText';
 
@@ -43,7 +43,7 @@ const ReactionButton = props => {
   const {name, value, onActionClick, isSelected} = props;
   return (
     <TouchableOpacity style={styles.buttonContainer} onPress={onActionClick}>
-      <CustomIcon
+      <BaseIcon
         size={20}
         style={styles.iconStyle}
         name={name}

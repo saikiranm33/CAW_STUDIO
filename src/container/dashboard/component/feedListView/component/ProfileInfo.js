@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
 import COLORS from '../../../../../utility/colors';
-import CustomIcon from '../../../../../utility/CustomIcon';
+import BaseIcon from '../../../../../utility/CustomIcon';
 
 const ProfileInfo = props => {
   const {data} = props;
@@ -20,7 +20,7 @@ const ProfileInfo = props => {
         </View>
       </View>
       <View style={styles.moreIconContainer}>
-        <CustomIcon name={'more'} style={styles.moreIcon} />
+        <BaseIcon name={'more'} style={styles.moreIcon} />
       </View>
     </View>
   );

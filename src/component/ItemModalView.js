@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import Modal from 'react-native-modal';
 import COLORS from '../utility/colors';
-import CustomIcon from '../utility/CustomIcon';
+import BaseIcon from '../utility/CustomIcon';
 
 const ShowModelInfo = props => {
   const {modalVisible, setModalVisible, data, isBottomCloseRequired} = props;
@@ -24,7 +24,7 @@ const ShowModelInfo = props => {
           onPress={() => {
             setModalVisible(false);
           }}>
-          <CustomIcon
+          <BaseIcon
             name={'close'}
             color={COLORS.LIGHT_COLOR}
             style={styles.closeIcon}
@@ -43,7 +43,7 @@ const QueryItemView = props => {
     <View key={index} style={addStyles.container}>
       <View style={addStyles.subContainer}>
         <View style={addStyles.iconContainer}>
-          <CustomIcon
+          <BaseIcon
             name={icon}
             style={addStyles.moreIcon}
             color={COLORS.APP_THEME_COLOR}
@@ -59,7 +59,7 @@ const QueryItemView = props => {
         </View>
       </View>
       <View style={addStyles.moreIconContainer}>
-        <CustomIcon name={'right'} style={styles.moreIcon} />
+        <BaseIcon name={'right'} style={styles.moreIcon} />
       </View>
     </View>
   );
