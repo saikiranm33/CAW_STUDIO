@@ -9,6 +9,9 @@ export const POST_LIKE = `${NAME}/POST_LIKE`;
 
 export const POST_COMMENT = `${NAME}/POST_COMMENT`;
 
+export const SELECTED_TAG = `${NAME}/SELECTED_TAG`;
+
+
 export const getNewsFeedAction = payload => {
   return {
     type: TAG_LOADING,
@@ -33,6 +36,14 @@ export const postLikeAction = payload => {
 export const postCommentAction = payload => {
   return {
     type: POST_COMMENT,
+    payload,
+  };
+};
+
+
+export const getSelectedTag = payload => {
+  return {
+    type: SELECTED_TAG,
     payload,
   };
 };

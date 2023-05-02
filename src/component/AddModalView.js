@@ -5,7 +5,7 @@ import BaseIcon from '../utility/CustomIcon';
 import ShowModelInfo from './ItemModalView';
 
 const PayScreen = props => {
-  const {data} = props;
+  // const {data} = props;
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <>
@@ -22,12 +22,12 @@ const PayScreen = props => {
         />
       </TouchableOpacity>
       <View style={styles.container}>
-        <ShowModelInfo
+        {/* <ShowModelInfo
           data={data}
           modalVisible={modalVisible}
           setModalVisible={isVisible => setModalVisible(isVisible)}
           isBottomCloseRequired={true}
-        />
+        /> */}
       </View>
     </>
   );

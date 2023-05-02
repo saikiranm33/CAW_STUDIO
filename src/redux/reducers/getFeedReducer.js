@@ -1,6 +1,7 @@
 import {
   POST_COMMENT,
   POST_LIKE,
+  SELECTED_TAG,
   TAG_LOADING,
   TAG_SUCCESS,
 } from '../actions/getFeed';
@@ -10,6 +11,7 @@ const getDefaultState = () => ({
   result: null,
   error: null,
   isError: false,
+  selectedTag:0,
 });
 
 function getLikeAction(state, action) {
@@ -54,6 +56,13 @@ function getLikeAction(state, action) {
         ...state,
         result: payloadInfo,
         isLoading: false,
+      };
+
+
+    case SELECTED_TAG:
+      return {
+        ...state,
+        selectedTag: action.payload,
       };
 
     default:

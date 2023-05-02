@@ -6,7 +6,7 @@ import TagView from './components/TagView';
 const MainHeader = props => {
   return (
     <View style={styles.container}>
-      <SearchBox />
+      {/* <SearchBox /> */}
       <TagView {...props} />
     </View>
   );

@@ -7,7 +7,6 @@ import COLORS from '../utility/colors';
 import {createStackNavigator} from '@react-navigation/stack';
 import Details from '../container/details';
 import DummyView from '../container/dummy';
-import {ADD_ACTION} from '../container/dashboard/data/dummyData';
 
 const Tab = createBottomTabNavigator();
 
@@ -58,7 +57,7 @@ const PaymentStack = props => {
         name="Pay"
         component={PayScreenComponent}
         options={{
-          tabBarButton: () => <AddModalView data={ADD_ACTION} />,
+          tabBarButton: () => <AddModalView  />,
         }}
       />
       <Tab.Screen

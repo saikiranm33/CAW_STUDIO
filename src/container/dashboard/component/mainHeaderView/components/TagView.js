@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import COLORS from '../../../../../utility/colors';
 import {useDispatch} from 'react-redux';
-import {getNewsFeedAction} from '../../../../../redux/actions/getFeed';
+import {getNewsFeedAction, getSelectedTag, SELECTED_TAG} from '../../../../../redux/actions/getFeed';
 import {ACTION_TYPES} from '../../../../../utility/customText';
 
 const TagView = props => {
@@ -17,13 +17,14 @@ const TagView = props => {
   return (
     <ScrollView showsHorizontalScrollIndicator={false} horizontal={true}>
       <View style={styles.container}>
-        {TagsArr.map((item, index) => {
+        {TAG_LIST.map((item, index) => {
           return (
             <TouchableOpacity
               key={index}
               onPress={() => {
+                dispatch(getSelectedTag(index));
                 updateSelectedIndex(index);
-                dispatch(getNewsFeedAction({type: ACTION_TYPES.GET_DATA}));
+                dispatch(getSelectedTag(index));
               }}
               style={[
                 styles.subConatiner,
@@ -57,13 +58,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const TagsArr = [
-  'ALL Posts',
-  'News',
-  'Diet',
+export const TAG_LIST = [
+  'Carbon Emission',
   'Lifestyle',
-  'Symptoms',
-  'Others',
+  'Grocery Info',
+  'Beauty Products',
 ];
 
 export default TagView;
